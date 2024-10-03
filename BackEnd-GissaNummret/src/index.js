@@ -18,8 +18,7 @@ app.get('/results', async (req, res)=>{
 })
 
 app.post('/results', async (req, res) => {
-    //const {name, score} = req.body;
-    //console.log(`Saving score for ${name}: ${score} points`);
+    
     await db.addScore(req.body)
     const result = await db.getAllResults();
     res.json(result);

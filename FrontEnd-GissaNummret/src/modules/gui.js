@@ -3,7 +3,6 @@ function displayResults(resultScore){
     container.innerHTML = '';
 
     for(const result of resultScore){
-        //console.log(result);
 
         //Skapa alla element som behövs
         const resultDiv = document.createElement('div');
@@ -13,7 +12,6 @@ function displayResults(resultScore){
         titleEl.innerText = result.name;
         resultP.innerText = `${result.score}`;
 
-        //lägg till elementen till rätt element
         resultDiv.append(titleEl, resultP);
         container.append(resultDiv);
     }

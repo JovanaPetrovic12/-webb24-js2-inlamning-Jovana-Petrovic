@@ -11,7 +11,7 @@ let points = 0;
 
 //Skapar ett form
 const formEL = document.querySelector('form');
-//console.log(formEL);
+
 
 //När man ska skicka in nummet som man ska gissa 
 formEL.addEventListener('submit', getUserGuess);
@@ -21,9 +21,9 @@ formEL.addEventListener('submit', getUserGuess);
     event.preventDefault();
 
     const userAnswer = document.querySelector('input').value;
-    //console.log(userAnswer);
+   
     formEL.reset();
-    //console.log('user guessed',event);
+    
 
 
     const resultEl = document.querySelector('#resultP');
@@ -36,8 +36,7 @@ formEL.addEventListener('submit', getUserGuess);
         //datorn tänker på ett nytt nummer
         correctNummer = Math.floor(Math.random() * 3) + 1;
         console.log(correctNummer);
-        //console.log("Du har " + points + " poäng");
-        //console.log('Rätt')
+        
     }
     else if (correctNummer !== userAnswer){
         resultEl.innerText = `Din gissning var fel! Du fick ${points} poäng.`;

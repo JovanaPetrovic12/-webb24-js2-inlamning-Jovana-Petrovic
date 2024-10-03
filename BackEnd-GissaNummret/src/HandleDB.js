@@ -12,8 +12,6 @@ async function addScore(newScore) {
     results.sort((a, b)=> b.score - a.score);
     results = results.slice(0, 5);
     await fs.writeFile("./src/highscores.json", JSON.stringify(results, null, 2));
-
-    //await fs.writeFile('./src/highScore.json', JSON.stringify(results, null, 2));
     
 }
 
